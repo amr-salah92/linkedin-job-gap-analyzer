@@ -1,0 +1,8 @@
+flask
+flask-sqlalchemy
+flask-cors
+spacy
+scrapy
+requests
+pandas
+sklearn

@@ -1,6 +1,4 @@
 import scrapy
-from scrapy.crawler import CrawlerProcess
-from scrapy.utils.project import get_project_settings
 
 class LinkedInJobSpider(scrapy.Spider):
     name = "linkedin_job_spider"
@@ -21,8 +19,3 @@ class LinkedInJobSpider(scrapy.Spider):
         next_page = response.css('a.next::attr(href)').get()
         if next_page is not None:
             yield response.follow(next_page, self.parse)
-
-# Run the Spider
-process = CrawlerProcess(get_project_settings())
-process.crawl(LinkedInJobSpider)
-process.start()
