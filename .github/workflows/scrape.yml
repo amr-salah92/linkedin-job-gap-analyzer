@@ -1,0 +1,20 @@
+name: Scrape Jobs
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Daily at midnight
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Scraper
+        run: |
+          pip install -r requirements.txt
+          scrapy runspider linkedin_spider.py -o jobs.json
+      - name: Commit Changes
+        run: |
+          git config --global user.name "GitHub Bot"
+          git config --global user.email "bot@example.com"
+          git add jobs.json
+          git commit -m "Update job listings"
+          git push
