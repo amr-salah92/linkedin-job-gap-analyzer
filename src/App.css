@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+form {
+  margin: 20px;
+}
+
+form label {
+  margin-right: 10px;
+}
+
+form input {
+  margin-right: 10px;
+}
+
+.gaps {
+  margin-top: 20px;
+}
+
+.gaps table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.gaps th, .gaps td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.gaps th {
+  background-color: #f2f2f2;
+}
