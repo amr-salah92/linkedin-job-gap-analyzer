@@ -18,3 +18,4 @@ jobs:
           git add jobs.json
           git commit -m "Update job listings"
           git push
+
